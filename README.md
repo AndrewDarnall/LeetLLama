@@ -40,3 +40,25 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 - 🤖 LLM backend (fine-tuned model on LeetCode dataset)
 - 💾 Vector store & caching layer for optimized retrieval
 - ☁️ Cloud-deployable with Kubernetes / Terraform
+
+# Requirements
+
+| `Software`        | `Version` |
+|-------------------|-----------|
+| `Python`          | `3.11`    |
+| `pip`             | `25.1`    |       
+| `Docker`          | ``        |
+| `Docker-Compose`  |           |
+| `Openjdk`         |           |
+| `Maven`           |           |  
+
+
+# Setup & Usage
+
+- Configure the setup and usage of the PoC
+
+# Demo
+
+- Show some demo ***.gifs***
+
+---
