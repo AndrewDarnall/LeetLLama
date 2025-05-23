@@ -1,6 +1,6 @@
 # LeetLLama
 
-![LeetLLama Cover Image](./assets/imgs/LeetLLama-Cover.jpg){ width=50% }
+![LeetLLama Cover Image](./assets/imgs/LeetLLama-Cover.jpg)
 
 # 🦙 Welcome to **LeetLLama**
 
