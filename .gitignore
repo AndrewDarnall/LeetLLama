@@ -1,0 +1,17 @@
+# Exclude the models and dataset
+models/huggingface/codellama/*
+models/huggingface/phi2/*
+models/huggingface/deepseek-coder/*
+
+data/*
+
+notebooks/*
+
+# Keep a structural reference to the directories for replication
+!models/huggingface/codellama/.gitkeep
+!models/huggingface/phi2/.gitkeep
+!models/huggingface/deepseek-coder/.gitkeep
+
+!data/.gitkeep
+
+!notebooks/*.ipynb
