@@ -1,16 +1,16 @@
 # Exclude the models and dataset
-models/huggingface/codellama/*
-models/huggingface/phi2/*
-models/huggingface/deepseek-coder/*
-
+models/*
 data/*
-
 notebooks/*
+env/hf.env
+compose/volumes
+
+milvus_test.py
+
+
 
 # Keep a structural reference to the directories for replication
-!models/huggingface/codellama/.gitkeep
-!models/huggingface/phi2/.gitkeep
-!models/huggingface/deepseek-coder/.gitkeep
+!models/.gitkeep
 
 !data/.gitkeep
 

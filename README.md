@@ -57,6 +57,11 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 
 - Configure the setup and usage of the PoC
 
+```bash
+cd ~/LeetLLama
+
+```
+
 # Demo
 
 - Show some demo ***.gifs***
