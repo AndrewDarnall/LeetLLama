@@ -11,6 +11,9 @@ second_milvus_test.py
 __pycache__/
 .pytest_cache/
 
+build/
+raglib.egg-info/
+
 
 
 # Keep a structural reference to the directories for replication
