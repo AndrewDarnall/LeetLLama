@@ -21,3 +21,6 @@ ipywidgets==8.1.7
 jupyterlab_widgets==3.0.15
 langchain==0.3.26
 pymilvus==2.5.12
+crawl4ai==0.6.3
+pytest==8.4.1
+pytest-asyncio==1.0.0

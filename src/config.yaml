@@ -1,0 +1,19 @@
+pl_docs_vstore_1:
+  host: localhost
+  port: 19530
+leetcode_vstore_2:
+  host: localhost
+  port: 19531
+crawler:
+  seed_urls:
+    - https://docs.python.org/3/
+embedder:
+  model_name: BAAI/bge-small-en
+chunker:
+  chunk_size: 500
+  overlap: 100
+
+endpoints:
+ ready:
+  leetcode_rag: http://leetcode_rag:8000/ready
+  planguage_doc_rag: http://planguage_doc_rag:8001/ready

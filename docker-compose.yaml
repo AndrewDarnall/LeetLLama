@@ -2,14 +2,13 @@ include:
   - ./compose/milvus-standalone-docker-compose-gpu.yml
 
 services:
-
   ollama:
     image: ollama/ollama:0.9.5
     container_name: leetllama_ollama
     ports:
-      - "1290:11434"  # Host:Container
+      - "1290:11434"
     volumes:
-      - ./models:/root/.ollama/models  # Reuse already-downloaded models
+      - ./models:/root/.ollama/models
     deploy:
       resources:
         reservations:
@@ -18,17 +17,13 @@ services:
               capabilities: ["gpu"]
               device_ids: ["0"]
     runtime: nvidia
-
     environment:
       - NVIDIA_VISIBLE_DEVICES=0
       - OLLAMA_ORCHESTRATOR=api
-
     networks:
       - leetllama_net
-
     depends_on:
       - "standalone"
-
 
 networks:
   leetllama_net:

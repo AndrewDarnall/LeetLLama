@@ -3,9 +3,13 @@ models/*
 data/*
 notebooks/*
 env/hf.env
-compose/volumes
+compose/*
 
 milvus_test.py
+second_milvus_test.py
+
+__pycache__/
+.pytest_cache/
 
 
 
@@ -15,3 +19,5 @@ milvus_test.py
 !data/.gitkeep
 
 !notebooks/*.ipynb
+
+!compose/*.yml

@@ -1,0 +1,21 @@
+[project]
+name = "raglib"
+version = "0.1.0"
+description = "Modular, extensible RAG library for NLP systems"
+authors = [
+    { name = "Andrew R. Darnall", email = "ardarnall@xeniaprogetti.it" }
+]
+license = "GPL3"
+readme = "README.md"
+requires-python = "==3.11.13"
+dependencies = [
+    "pymilvus==2.5.12",
+    "crawl4ai==0.6.3",
+    "transformers==4.52.4",
+    "pandas==2.2.3",
+    "numpy==2.3.1"
+]
+
+[build-system]
+requires = ["setuptools==78.1.1"]
+build-backend = "setuptools.build_meta"
