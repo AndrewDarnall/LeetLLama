@@ -1,8 +1,15 @@
-# LeetLLama
+# 🦙 LeetLLama
+
+[![AWS](https://img.shields.io/badge/Platform-AWS-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Docker](https://img.shields.io/badge/Cloud%20Native-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LLM Server](https://img.shields.io/badge/LLM%20Server-Ollama-black?logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxIDExaC0uNzNDMjAgMTAuMzcgMTkuNDIgOS44NSAxOSAxMGMtLjQ4IDAtLjg4LjMzLS45OC43OGwtLjUzIDIuMTQtMi4yOS0xLjMzLjYtMi41QzE1LjUzIDkuODIgMTYgOS4xOSAxNiA4LjUgMTYgNy4xNyAxNC44MyA2IDEzLjUgNmExLjQ5IDEuNDkgMCAwIDAtLjYyLjE0QzEyLjQ2IDUuMjIgMTEuMjUgNCA5LjUgNCA3LjAxIDQgNSAzLjA5IDUgMS41YzAgLjM0LjA2LjY3LjE2Ljk4QzMuNjIgMy4xNCAyIDQuNjggMiA2LjUgMiA4LjA4IDMuMDIgOS41NyA0LjY0IDEwLjE1Yy4zNi4xMy43Mi4zLjktLjIuMTMtLjM1LjM1LS42Ni42Mi0uOTJjLjYzLS42MyAxLjY2LS42MyAyLjMgMCAuMzIuMzIuNS43Ny41IDEuMjMgMCAuMjUuMDYuNS4xNi43M2w1LjcyIDMuMzUtLjgxIDMuMzNjLS4wMi4wOC0uMDIuMTYuMDEuMjQuMDMuMDcuMS4xMi4xOC4xNS4wNy4wMi4xNS4wMi4yMyAwIC4yNS0uMDQuNDktLjExLjcyLS4yMy40NS0uMjMuNzIuMi43Mi41NiAwIC45OC0uNzguOThIMjFjLjU1IDAgMS0uNDUgMS0xcy0uNDUtMS0xLTF6Ii8+PC9zdmc+)](https://ollama.com/)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ![LeetLLama Cover Image](./assets/imgs/LeetLLama-Cover.jpg)
 
-# 🦙 Welcome to **LeetLLama**
+# Welcome to **LeetLLama**
 
 **LeetLLama** is a lightweight yet forward-thinking **proof of concept** (PoC) for an interactive, AI-augmented platform designed to empower aspiring software engineers through self-directed learning.
 
