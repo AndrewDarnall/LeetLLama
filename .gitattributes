@@ -1,0 +1,6 @@
+# .gitattributes
+*.py linguist-detectable=true
+*.cpp linguist-detectable=true
+*.rs linguist-detectable=true
+*.ipynb linguist-detectable=false
+Makefile linguist-detectable=true
