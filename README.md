@@ -33,13 +33,13 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 
 ---
 
-## 🧱 Tech Stack & Architecture (optional section you can expand later)
-- 🐍 Python / ☕ Java microservices
+## 🧱 Tech Stack & Architecture
+- 🐍 Python
 - 📦 Dockerized microservice architecture
 - 🧵 Message queue for asynchronous communication
-- 🤖 LLM backend (fine-tuned model on LeetCode dataset)
-- 💾 Vector store & caching layer for optimized retrieval
-- ☁️ Cloud-deployable with Kubernetes / Terraform
+- 🤖 LLM backend
+- 💾 Vector store
+- ☁️ Cloud-deployable with Kubernetes
 
 # Requirements
 
@@ -47,23 +47,12 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 |-------------------|-----------|
 | `Python`          | `3.11`    |
 | `pip`             | `25.1`    |       
-| `Docker`          | ``        |
-| `Docker-Compose`  |           |
-| `Openjdk`         |           |
-| `Maven`           |           |  
+| `Docker`          | `28.1.1`  |
+| `Docker-Compose`  | `2.36.0`  |
 
 
-# Setup & Usage
+# Some Samples
 
-- Configure the setup and usage of the PoC
-
-```bash
-cd ~/LeetLLama
-
-```
-
-# Demo
-
-- Show some demo ***.gifs***
+![LeetLLaMA UI](./assets/imgs/leetllama-ui.png)
 
 ---

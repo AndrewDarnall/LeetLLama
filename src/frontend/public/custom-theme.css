@@ -1,0 +1,118 @@
+/* === LOGO STYLE === */
+img[alt="App logo"] {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Color */
+html, body {
+  background-color: #ffffff !important; /* Creamy white */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide README button */
+#readme-button {
+  display: none !important;
+}
+
+/* Hide theme toggle button */
+#theme-toggle {
+  display: none !important;
+}
+
+/* === CREAMY WHITE BACKGROUND for main UI (body, chat window, inputs) === */
+body,
+#chat-input,
+textarea,
+input[type="text"],
+input[type="search"],
+input,
+.chat-message {
+  background-color: #fef9f0 !important;  /* Creamy white */
+  color: #333; /* Dark text for readability */
+  border: 1px solid #ddd; /* Soft neutral border */
+  border-radius: 6px;
+  box-shadow: none !important; /* Remove any shadows */
+}
+
+/* Remove default blue focus outlines on inputs and textareas */
+textarea:focus,
+input:focus,
+#chat-input:focus,
+input[type="text"]:focus,
+input[type="search"]:focus {
+  outline: 2px solid transparent !important;
+  box-shadow: none !important;
+}
+
+/* === BUTTONS ONLY: primary style and hover === */
+button,
+button[class*="primary"],
+[class*="btn-primary"],
+.bg-primary,
+.text-primary {
+  background-color: #000000 !important; /* Main green */
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button:hover,
+.bg-primary:hover {
+  background-color: #000000 !important; /* Slightly darker green */
+}
+
+/* === ACCENT TEXT (active icons, links, etc.) === */
+a,
+.text-accent,
+.text-magenta,
+.text-fuchsia-600 {
+  color: #000000 !important; /* Green accent */
+}
+
+/* === BORDER COLORS (tags, chips, etc.) === */
+.border-primary,
+.border-fuchsia-600 {
+  border-color: #000000 !important; /* Green border */
+}
+
+/* === FOCUS OUTLINE COLOR for buttons, but NOT inputs === */
+button:focus,
+button[class*="primary"]:focus,
+[class*="btn-primary"]:focus,
+.bg-primary:focus,
+.text-primary:focus {
+  outline-color: #000000 !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4) !important; /* Subtle green glow */
+}
+
+/* Chat input styles */
+#chat-input {
+  color: black !important;
+  background-color: #F2F2F2 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  cursor: text !important;
+}
+
+/* On hover: change text color to black */
+#chat-input:hover {
+  color: black !important;
+  cursor: text !important;
+}
+
+/* For selected text inside #chat-input, change selection highlight color */
+#chat-input::selection {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  color: black !important;
+}
+
+#chat-settings-open-modal {
+  margin-top: 10px;
+}

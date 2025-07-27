@@ -1,0 +1,12 @@
+FROM python:3.11
+
+WORKDIR /app
+
+COPY src/api/requirements.txt /app/api/requirements.txt
+RUN python -m pip install -r ./api/requirements.txt
+
+COPY src/api /app/api
+COPY src/models /app/api/models
+COPY src/config.yaml /app/api/config.yaml
+
+CMD ["uvicorn", "api.main:api", "--host", "0.0.0.0", "--port", "1285"]

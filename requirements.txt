@@ -24,4 +24,4 @@ pymilvus==2.5.12
 crawl4ai==0.6.3
 pytest==8.4.1
 pytest-asyncio==1.0.0
-build==1.2.2
+spacy==3.8.7

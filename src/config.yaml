@@ -1,19 +1,37 @@
-pl_docs_vstore_1:
-  host: localhost
-  port: 19530
-leetcode_vstore_2:
-  host: localhost
-  port: 19531
-crawler:
-  seed_urls:
-    - https://docs.python.org/3/
-embedder:
-  model_name: BAAI/bge-small-en
-chunker:
-  chunk_size: 500
-  overlap: 100
+embedding:
+  model_name: "BAAI/bge-large-en-v1.5"  # Best overall but more sensitive to numerical data
+  normalize: true
+  preprocess_e5: true
+
+llms:
+  default: "llama3.2:3b"
+  default_context_window: 32768
+  available:
+    - qwen3:4b
+    - phi3:3.8b
+    - gemma3:4b
+  temperature: 0.0
+  top_k: 1
+  top_p: 1.0
+  repeat_penalty: 1.0
+  seed: 42
+  
+
+server:
+  host: "0.0.0.0"
+  port: 1299
+  log_level: "info"
 
 endpoints:
- ready:
-  leetcode_rag: http://leetcode_rag:8000/ready
-  planguage_doc_rag: http://planguage_doc_rag:8001/ready
+ ollama: "http://localhost:1290/api/chat"
+ rag_service: "http://localhost:1299/api/rag-retrieve"
+ milvus: "tcp://standalone:19530"
+
+rag_config:
+  collection_name: "leetcode_kb"
+  top_k: 3
+  score_threshold: 0.4
+
+vstore:
+  host: "localhost"
+  port: "19530"

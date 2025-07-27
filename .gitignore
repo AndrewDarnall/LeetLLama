@@ -4,6 +4,7 @@ data/*
 notebooks/*
 env/hf.env
 compose/*
+nlp_system_eval/
 
 milvus_test.py
 second_milvus_test.py

@@ -1,5 +1,6 @@
 include:
   - ./compose/milvus-standalone-docker-compose-gpu.yml
+  - ./compose/neo4j-docker-compose.yml
 
 services:
   ollama:
@@ -24,6 +25,55 @@ services:
       - leetllama_net
     depends_on:
       - "standalone"
+
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: ./Dockerfiles/Dockerfile.api
+  #   container_name: leetllama_api
+  #   ports:
+  #     - "1285:1285"
+  #   networks:
+  #     - leetllama_net
+  #   depends_on:
+  #     - "rag-service"
+
+  rag-service:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.ragservice
+    container_name: leetllama_rag_service
+    ports:
+      - "1299:1299"
+    environment:
+      - PYTHONPATH=/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+    runtime: nvidia
+    networks:
+      - leetllama_net
+    depends_on:
+      - "standalone"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile.frontend
+    container_name: leetllama_frontend
+    ports:
+      - "1291:8502"
+    environment:
+      - PYTHONPATH=/app
+    depends_on:
+      - ollama
+      - rag-service
+    networks:
+      - leetllama_net
 
 networks:
   leetllama_net:
