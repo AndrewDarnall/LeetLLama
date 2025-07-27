@@ -41,7 +41,7 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 - 💾 Vector store
 - ☁️ Cloud-deployable with Kubernetes
 
-# Requirements
+# Software Requirements
 
 | `Software`        | `Version` |
 |-------------------|-----------|
@@ -50,9 +50,94 @@ The goal is to simulate the benefits of a **pair-programming** session with a se
 | `Docker`          | `28.1.1`  |
 | `Docker-Compose`  | `2.36.0`  |
 
+# Hardware Requirements
+
+> These are *minimun* requirements
+
+|`Component`          | `Vendor`  |       `Model`      |
+|---------------------|-----------|--------------------|
+|   `CPU`             |  `Intel`  |      `8th Gen`     |
+|  `GPU`              | `NVIDIA`  | `GeForce 4070 RTX` |
+|  `RAM`              | `Any`     |      `DDR4`        |
+|  `Secondary Memory` | `SSD`     |      `100 GB`      |
+
+# Setup & Configuration
+
+1) Start by *building* the entire project
+
+```bash
+docker compose build
+```
+
+2) Then *up* the project with
+
+```bash
+docker compose up -d
+```
+
+3) Connect to `ollama` to *download* the required models:
+
+```bash
+llama3.2:3b
+qwen3:4b
+phi3:3.8b
+gemma3:4b
+```
+
+Using the commands:
+
+(Connect to the ollama container)
+```bash
+docker exec -it leetllama_ollama /bin/bash
+```
+(Pull the models)
+```bash
+ollama pull llama3.2:3b && ollama pull qwen3:4b && ollama pull phi3:3.8b && ollama pull gemma3:4b
+```
+
+Then `exit`
+
+4) Then, download all the `Python` dependencies required to populate the *Milvus* Knowledge Base with the ***Leetcode Dataset***, running this script:
+
+(Download the requirements)
+```bash
+python -m pip install -r requirements.txt
+```
+
+(Populate the Milvus Vector Store)
+```bash
+cd ~/data
+python load_milvus_kb.py
+cd ../
+```
+
+5) Now you may connect to the *Frontend UI* at the following URL:
+
+```bash
+http://localhost:1291/
+```
+
+
 
 # Some Samples
 
+This is the frontend UI you will see upon ***upping*** the `docker-compose` file.
+
 ![LeetLLaMA UI](./assets/imgs/leetllama-ui.png)
+
+The gear button aids with the selection of the ***models*** to be used for the ***inference***:
+
+![LeetLLaMA Model Selection](./assets/imgs/leetllama-model-selection.png)
+
+Then once you have chosen the model you seek, ***press the confirm button***
+
+![LeetLLaMA Confirmation Selection](./assets/imgs/leetllama-model-confirmation.png)
+
+---
+
+# Disclaimer
+
+This repo is still an early ***PoC*** and not ready for being *forked*, once the `Cloud Setup` and `Better Architecture` will be implemented, then
+you may proceed with ***forking*** the repo, and to know for sure, this message will **no longer appear in the README**
 
 ---

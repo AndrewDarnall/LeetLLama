@@ -15,6 +15,8 @@ COLLECTION_NAME = CONFIG["rag_config"]["collection_name"]
 TOP_K = CONFIG["rag_config"]["top_k"]
 SIMILARITY_THRESHOLD = CONFIG["rag_config"]["score_threshold"]
 
+print(f"MILVUS_URI:\t{MILVUS_URI}")
+
 log = logging.getLogger("Milvus-Search")
 
 # Initialize connection, collection, and embedder once (cache outside function)
