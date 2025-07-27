@@ -10,17 +10,16 @@ from .models.io import RAGRequest, RAGResponse, ChunkResult
 from . import CONFIG
 
 # Configuration constants (can move to env or config file)
-MILVUS_URI = CONFIG["endpoints"]["milvus"]
 COLLECTION_NAME = CONFIG["rag_config"]["collection_name"]
 TOP_K = CONFIG["rag_config"]["top_k"]
 SIMILARITY_THRESHOLD = CONFIG["rag_config"]["score_threshold"]
 
-print(f"MILVUS_URI:\t{MILVUS_URI}")
-
 log = logging.getLogger("Milvus-Search")
 
 # Initialize connection, collection, and embedder once (cache outside function)
-connections.connect(alias="default", uri=MILVUS_URI)
+MILVUS_HOST, MILVUS_PORT = CONFIG["endpoints"]["milvus"].split("://")[1].split(":")
+
+connections.connect(alias="default", host=MILVUS_HOST, port=int(MILVUS_PORT))
 collection = Collection(name=COLLECTION_NAME)
 collection.load()
 

@@ -142,6 +142,14 @@ Then once you have chosen the model you seek, ***press the confirm button***
 
 ---
 
+1) In this simple example, I asked how I could *invert a linked list*
+
+![Invert Linked List Demo](./assets/vids/invert-a-linked-list.gif)
+
+2) In this more articulated example, I gave the model the entire question for the *infamous* `two sum` probelm
+
+![Two Sum Problem Demo](./assets/vids/two-sum.gif)
+
 # Disclaimer
 
 This repo is still an early ***PoC*** and not ready for being *forked*, once the `Cloud Setup` and `Better Architecture` will be implemented, then

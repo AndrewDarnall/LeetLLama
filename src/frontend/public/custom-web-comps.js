@@ -1,16 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const intervalId = setInterval(() => {
-    // 1. Remove the #upload-button element if it exists
-    const uploadButton = document.getElementById("upload-button");
-    if (uploadButton) {
-      uploadButton.remove();
-    }
+  // Mutation observer callback
+  const observerCallback = (mutationsList) => {
+    for (const mutation of mutationsList) {
+      const uploadButton = document.getElementById("upload-button");
+      if (uploadButton) {
+        uploadButton.remove();
+      }
 
-    // 2. Modify the watermark text if not already modified
-    const watermark = document.querySelector(".watermark");
-    if (watermark && !watermark.querySelector("span.made-by")) {
-      watermark.innerHTML = '<span class="made-by">A PoC by TheComputerScientist</span>';
-      clearInterval(intervalId);
+      const watermark = document.querySelector(".watermark");
+      if (watermark && !watermark.querySelector("span.made-by")) {
+        watermark.innerHTML = '<span class="made-by">This is a Proof of Concept</span>';
+      }
     }
-  }, 500);
+  };
+
+  // Create and start the observer
+  const observer = new MutationObserver(observerCallback);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  // Run the logic once on initial load
+  observerCallback();
 });

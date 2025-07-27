@@ -23,8 +23,8 @@ server:
   log_level: "info"
 
 endpoints:
- ollama: "http://localhost:1290/api/chat"
- rag_service: "http://localhost:1299/api/rag-retrieve"
+ ollama: "http://leetllama_ollama:11434/api/chat"
+ rag_service: "http://leetllama_rag_service:1299/api/rag-retrieve"
  milvus: "tcp://standalone:19530"
 
 rag_config:

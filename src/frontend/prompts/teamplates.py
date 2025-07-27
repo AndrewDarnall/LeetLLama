@@ -7,10 +7,10 @@ You are a Senior Software Engineer, leetcode expert and teacher. Answer accurate
 
 user_prompt_template = Template("""
 Question:
-{{ question }}
+{{ user_input }}
 
-RAG Context 1:
-{{ rag_context_1 }}
+RAG Context:
+{{ context }}
 
 ---
 
